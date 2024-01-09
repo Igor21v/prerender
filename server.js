@@ -12,5 +12,5 @@ server.use(
       client.set(req.url, prerender_res.body);
     })
 );
-//server.use(require("prerender-memory-cache"));
+server.use(require("prerender-memory-cache"));
 server.start();
