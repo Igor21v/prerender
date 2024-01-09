@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "prerender": "^5.20.2",
-    "prerender-memory-cache": "^1.0.2"
+    "prerender-memory-cache": "^1.0.2",
+    "redis": "^4.6.12"
   }
 }
