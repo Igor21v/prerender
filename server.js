@@ -14,33 +14,9 @@ const server = prerender({
 });
 /* server.use(require("prerender-level-cache")); */
 //server.use(require("prerender-memory-cache"));
-/* server.start(); */
+server.start();
 
-const CDP = require('chrome-remote-interface');
-
-async function example() {
-    let client;
-    try {
-        // connect to endpoint
-        client = await CDP();
-        // extract domains
-        const {Network, Page} = client;
-        // setup handlers
-        Network.requestWillBeSent((params) => {
-            console.log(params.request.url);
-        });
-        // enable events then start!
-        await Network.enable();
-        await Page.enable();
-        await Page.navigate({url: 'https://github.com'});
-        await Page.loadEventFired();
-    } catch (err) {
-        console.error(err);
-    } finally {
-        if (client) {
-            await client.close();
-        }
-    }
-}
-
-example();
+/* 
+Перед запуском пререндера в windows запустить хром в командрой строке
+C:/Program Files/Google/Chrome/Application/chrome.exe" --headless --remote-debugging-port=9222 
+*/
