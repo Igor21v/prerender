@@ -12,11 +12,12 @@ const server = prerender({
     `--remote-debugging-port=9222`,
   ],
 });
-/* server.use(require("prerender-level-cache")); */
+server.options.ttl=60000;
+server.use(require("prerender-level-cache"));
 //server.use(require("prerender-memory-cache"));
 server.start();
 
 /* 
 Перед запуском пререндера в windows запустить хром в командрой строке
-C:/Program Files/Google/Chrome/Application/chrome.exe" --headless --remote-debugging-port=9222 
+"C:/Program Files/Google/Chrome/Application/chrome.exe" --headless --remote-debugging-port=9222 
 */
