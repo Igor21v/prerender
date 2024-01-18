@@ -12,8 +12,8 @@ const server = prerender({
     `--remote-debugging-port=9222`,
   ],
 });
-server.options.ttl=60000;
-server.use(require("prerender-level-cache"));
+server.options.ttl = 10000;
+server.use(require("prerender-cache-auto-refresh"));
 //server.use(require("prerender-memory-cache"));
 server.start();
 
