@@ -2,25 +2,15 @@ const prerender = require("prerender-memo");
 
 const server = prerender({
   chromeLocation: `C:/Program Files/Google/Chrome/Application/chrome.exe`,
-  chromeFlags: [
-    /*  "--no-sandbox", */
-    "--headless",
-    "--disable-gpu",
-    "--hide-scrollbars",
-    "--enable-logging --v=1",
-    /* "--dump-dom", */
-    `--remote-debugging-port=9222`,
-  ],
+  /* ttl: 5000 */
 });
-/* server.options.ttl = 100000; */
-/* server.use(require("prerender-cache-auto-refresh")); */
-//server.use(require("prerender-memory-cache"));
+
+/* Before running the pre-render in windows, run chrome on the command line
+"C:/Program Files/Google/Chrome/Application/chrome.exe" --headless --remote-debugging-port=9222  */
+
 server.start();
 
 /* 
-Перед запуском пререндера в windows запустить хром в командрой строке
-"C:/Program Files/Google/Chrome/Application/chrome.exe" --headless --remote-debugging-port=9222 
-
-страница в пререндере 
+The page in the pre-render
 http://localhost:3000/render?url=http://localhost:3006/about
 */
