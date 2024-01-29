@@ -3,6 +3,9 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "prerender-memo": "^1.0.1"
+    "jsdom": "^24.0.0",
+    "prerender-memo": "^1.0.1",
+    "query-selector": "^2.0.0",
+    "xmlhttprequest": "^1.8.0"
   }
 }

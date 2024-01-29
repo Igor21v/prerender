@@ -1,7 +1,8 @@
 const prerender = require("prerender-memo");
 
 const server = prerender({
-  /* chromeLocation: `C:/Program Files/Google/Chrome/Application/chrome.exe`, */
+  chromeLocation: `C:/Program Files/Google/Chrome/Application/chrome.exe`,
+  sitemap: `https://webitem.ru/static/sitemapImit.xml`,
   /* ttl: 5000 */
 });
 
