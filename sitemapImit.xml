@@ -28,5 +28,8 @@
 <url>
 <loc>http://localhost:3006/en/items/background</loc>
 </url>
+<url>
+<loc>http://localhost:3006/en/items/backgroundg</loc>
+</url>
 
 </urlset>

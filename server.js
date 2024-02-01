@@ -3,7 +3,7 @@ const prerender = require("prerender-memo");
 const server = prerender({
   chromeLocation: `C:/Program Files/Google/Chrome/Application/chrome.exe`,
   sitemap: `https://webitem.ru/static/sitemapImit.xml`,
-  sitemapRefreshPreriod: 20000,
+  /* sitemapUpdatePreriod: 20000, */
   /* ttl: 5000 */
 });
 
