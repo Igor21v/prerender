@@ -4,6 +4,6 @@
   },
   "dependencies": {
     "jsdom": "^24.0.0",
-    "prerender-memo": "^1.0.1"
+    "prerender-memo": "^1.1.0"
   }
 }
